@@ -37,7 +37,6 @@ class AccountApiController extends BaseAPIController
     public function ping(Request $request)
     {
         $headers = Utils::getApiHeaders();
-
         // Legacy support for Zapier
         if (request()->v2) {
             return $this->response(auth()->user()->email);
